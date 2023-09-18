@@ -10,7 +10,7 @@ pipe = AutoPipelineForInpainting.from_pretrained("diffusers/stable-diffusion-xl-
                                                 subfolder="scheduler", 
                                                 add_kwargs,
                                                 torch_dtype=torch.float16, 
-                                                variant="fp16")
+                                                variant="fp16").to(device)
 
 def read_content(file_path: str) -> str:
     """read the content of target file
