@@ -128,8 +128,8 @@ with image_blocks as demo:
     gr.HTML(
         """
             <div class="footer">
-                <p>Model by <a href="https://huggingface.co/diffusers" style="text-decoration: underline;" target="_blank">Diffusers</a> - Gradio Demo by 🤗 Hugging Face
-                </p>
+              <h3 style='text-align: center'>Будь в курсе обновлений <a href='https://vk.com/public221489796'>ПОДПИСАТЬСЯ</a></h3>
+                <p style='text-align: center'>Будь в курсе обновлений <a href='https://vk.com/public221489796'>ПОДПИСАТЬСЯ</a></p>
             </div>
         """
     )
