@@ -6,7 +6,7 @@ import diffusers
 from share_btn import community_icon_html, loading_icon_html, share_js
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-pipe.scheduler = scheduler.from_pretrained("stabilityai/stable-diffusion-xl-base-1.0", subfolder="scheduler", fp16=True, **add_kwargs)
+pipe.scheduler = scheduler.from_pretrained("stabilityai/stable-diffusion-xl-base-1.0", subfolder="scheduler", **add_kwargs)
 
 def read_content(file_path: str) -> str:
     """read the content of target file
