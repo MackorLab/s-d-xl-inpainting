@@ -44,8 +44,8 @@ def predict(dict, prompt="", negative_prompt="", guidance_scale=7.5, steps=20, s
 
 css = '''
 .gradio-container{max-width: 1100px !important}
-#image_upload{min-height:512px}
-#image_upload [data-testid="image"], #image_upload [data-testid="image"] > div{min-height: 512px}
+#image_upload{min-height:400px}
+#image_upload [data-testid="image"], #image_upload [data-testid="image"] > div{min-height: 400px}
 #mask_radio .gr-form{background:transparent; border: none}
 #word_mask{margin-top: .75em !important}
 #word_mask textarea:disabled{opacity: 0.3}
