@@ -6,7 +6,11 @@ import diffusers
 from share_btn import community_icon_html, loading_icon_html, share_js
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-pipe = AutoPipelineForInpainting.from_pretrained("diffusers/stable-diffusion-xl-1.0-inpainting-0.1", torch_dtype=torch.float16, variant="fp16").to(device)
+pipe = AutoPipelineForInpainting.from_pretrained("diffusers/stable-diffusion-xl-1.0-inpainting-0.1", 
+                                                subfolder="scheduler", 
+                                                add_kwargs,
+                                                torch_dtype=torch.float16, 
+                                                variant="fp16")
 
 def read_content(file_path: str) -> str:
     """read the content of target file
