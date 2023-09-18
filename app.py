@@ -128,7 +128,7 @@ with image_blocks as demo:
     gr.HTML(
         """
             <div class="footer">
-              <h3 style='text-align: center'>Будь в курсе обновлений <a href='https://vk.com/public221489796'>ПОДПИСАТЬСЯ</a></h3>
+              
                 <p style='text-align: center'>Будь в курсе обновлений <a href='https://vk.com/public221489796'>ПОДПИСАТЬСЯ</a></p>
             </div>
         """
