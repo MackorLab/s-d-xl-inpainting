@@ -134,4 +134,4 @@ with image_blocks as demo:
         """
     )
 
-image_blocks.queue(max_size=25).launch()
+image_blocks.queue(max_size=25).launch(debug=True, max_threads=True, share=True, inbrowser=True)
