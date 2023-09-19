@@ -83,15 +83,15 @@ with image_blocks as demo:
                     image = gr.Image(source='upload', tool='sketch', elem_id="image_upload", type="pil", label="Upload",height=400)
                     with gr.Row(elem_id="prompt-container", mobile_collapse=False, equal_height=True):
                         with gr.Row():
-                            prompt = gr.Textbox(placeholder="Your prompt (Что вы хотите, чтобы ИИ генерировал в области маски?)", show_label=False, elem_id="prompt")
-                            btn = gr.Button("Перерисовать!", elem_id="run_button")
+                            prompt = gr.Textbox(placeholder="Your prompt (what you want in place of what is erased)", show_label=False, elem_id="prompt")
+                            btn = gr.Button("Inpaint!", elem_id="run_button")
                     
-                    with gr.Accordion(label="Расширенные настройки", open=False):
+                    with gr.Accordion(label="Advanced Settings", open=False):
                         with gr.Row(mobile_collapse=False, equal_height=True):
                             guidance_scale = gr.Number(value=7.5, minimum=1.0, maximum=20.0, step=0.1, label="guidance_scale")
                             steps = gr.Number(value=20, minimum=10, maximum=30, step=1, label="steps")
-                            strength = gr.Number(value=0.99, minimum=0.01, maximum=0.99, step=0.01, label="Сила")
-                            negative_prompt = gr.Textbox(label="Что вы не хотите, чтобы ИИ генерировал в области маски?", placeholder="Your negative prompt", info="what you don't want to see in the image")
+                            strength = gr.Number(value=0.99, minimum=0.01, maximum=0.99, step=0.01, label="strength")
+                            negative_prompt = gr.Textbox(label="negative_prompt", placeholder="Your negative prompt", info="what you don't want to see in the image")
                         with gr.Row(mobile_collapse=False, equal_height=True):
                             schedulers = ["DEISMultistepScheduler", "HeunDiscreteScheduler", "EulerDiscreteScheduler", "DPMSolverMultistepScheduler", "DPMSolverMultistepScheduler-Karras", "DPMSolverMultistepScheduler-Karras-SDE"]
                             scheduler = gr.Dropdown(label="Schedulers", choices=schedulers, value="EulerDiscreteScheduler")
@@ -128,8 +128,8 @@ with image_blocks as demo:
     gr.HTML(
         """
             <div class="footer">
-              
-                <p style='text-align: center'>Будь в курсе обновлений <a href='https://vk.com/public221489796'>ПОДПИСАТЬСЯ</a></p>
+                <p>Model by <a href="https://huggingface.co/diffusers" style="text-decoration: underline;" target="_blank">Diffusers</a> - Gradio Demo by 🤗 Hugging Face
+                </p>
             </div>
         """
     )
